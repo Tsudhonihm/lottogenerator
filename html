@@ -1,0 +1,41 @@
+<html><head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Daily Lotto Number Generator</title> 
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+            color: green;
+        }
+    </style> 
+ </head> 
+ <body> 
+  <h1>Daily Lotto Number Generator</h1> <button onclick="generateNumbers()">Generate 3-Digit Lotto Number</button> 
+  <div id="result"></div> 
+  <script>
+        function generateNumbers() {
+            // Generate 3 random digits between 0 and 9
+            const digit1 = Math.floor(Math.random() * 10); // Random number between 0 and 9
+            const digit2 = Math.floor(Math.random() * 10); // Random number between 0 and 9
+            const digit3 = Math.floor(Math.random() * 10); // Random number between 0 and 9
+
+            // Combine the digits into a single string
+            const lottoNumber = `${digit1}${digit2}${digit3}`;
+
+            // Display the generated number in the result div
+            document.getElementById('result').innerHTML = `Your Daily Lotto Number is: ${lottoNumber}`;
+        }
+    </script> 
+ 
+</body></html>
